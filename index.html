@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أذكار الصباح والمساء</title>
   <style>
     body {
@@ -34,6 +35,31 @@
   </style>
 </head>
 <body>
+   <script async src="https://telegram.org/js/telegram-widget.js?22" 
+          data-telegram-login="Sadakahgaryah_bot" 
+          data-size="large" 
+          data-onauth="onTelegramAuth" 
+          data-request-access="write">
+  </script>
+    <div id="userInfo"></div>
+    <script type="text/javascript">
+    function onTelegramAuth(user) {
+      // Show logged in user info
+      document.getElementById("userInfo").innerHTML = 
+        "Welcome, " + user.first_name + " " + (user.last_name || "") +
+        (user.username ? " (@" + user.username + ")" : "") + 
+        " - ID: " + user.id;
+
+      // Example: Send data to your backend (optional)
+      /*
+      fetch("/save-user", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user)
+      });
+      */
+    }
+  </script>
   <h1>📿 أذكار الصباح والمساء 📿</h1>
   <a href="morning.html">☀️ أذكار الصباح</a>
   <a href="evening.html">🌙 أذكار المساء</a>
