@@ -34,6 +34,12 @@
     a:hover {
       background: #2980b9;
     }
+     .telegram-mini body {
+    font-size: 15px !important;  /* smaller in Telegram */
+  }
+    .telegram-mini .btn {
+    font-size: 16px !important;
+  }
   </style>
 </head>
 <body>
@@ -42,6 +48,15 @@
           data-size="large" 
           data-onauth="onTelegramAuth" 
           data-request-access="write">
+          <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  const tg = window.Telegram.WebApp;
+
+  if (tg) {
+    // Add a class to body if inside Telegram Mini App
+    document.body.classList.add("telegram-mini");
+  }
+</script>
   </script>
     <div id="userInfo"></div>
     <script type="text/javascript">
