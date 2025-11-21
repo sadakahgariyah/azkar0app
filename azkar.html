@@ -18,7 +18,7 @@
     h1 {
       color: #2c3e50;
     }
-    a {
+    a, .nav-btn {
       display: block;
       margin: 10px;
       padding: 15px 25px;
@@ -28,8 +28,13 @@
       border-radius: 10px;
       font-size: 18px;
     }
-    a:hover {
+    a:hover, .nav-btn:hover {
       background: #2980b9;
+    }
+    .nav-btn {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
   </style>
 </head>
@@ -37,6 +42,6 @@
   <h1>📿 أذكار الصباح والمساء 📿</h1>
   <a href="morning.html">☀️ أذكار الصباح</a>
   <a href="evening.html">🌙 أذكار المساء</a>
-  <a href="kahf.html">📖 سورة الكهف</a>
+  <button class="nav-btn" onclick="location.href='kahf.html'" aria-label="فتح سورة الكهف">📖 سورة الكهف</button>
 </body>
 </html>
