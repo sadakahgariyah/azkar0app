@@ -32,6 +32,17 @@
     </div>
   </header>
 
+  <main class="wrap">
+    <section class="card">
+      <label for="reciterSelect">اختر قارئًا (من القائمة أو اضف رابط مباشر)</label>
+      <div style="display:flex;gap:8px;flex-direction:column">
+        <select id="reciterSelect" aria-label="اختيار القارئ"></select>
+        <div style="display:flex;gap:8px">
+          <input id="customUrl" type="text" placeholder="الصق رابط mp3 مباشر هنا (مثال: https://...)" />
+          <button id="addUrlBtn" class="reciter-btn">أضف للرابط</button>
+        </div>
+      </div>
+
       <div class="controls">
         <button id="playBtn" class="reciter-btn">تشغيل</button>
         <button id="pauseBtn" class="reciter-btn">إيقاف مؤقت</button>
@@ -44,7 +55,7 @@
 
       <div class="reciter-list" id="reciterList" aria-hidden="false"></div>
 
-      <div style="margin-top:12px">   
+   
   </main>
 
   <script>
