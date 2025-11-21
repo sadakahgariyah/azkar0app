@@ -29,20 +29,8 @@
   <header>
     <div class="wrap">
       <h1>سورة الكهف — صفحة صوتية (بدون قاعدة بيانات)</h1>
-      <div class="small">صفحة ثابتة تعمل بملفات صوتية محلية أو روابط مباشرة (GitHub Pages جاهزة)</div>
     </div>
   </header>
-
-  <main class="wrap">
-    <section class="card">
-      <label for="reciterSelect">اختر قارئًا (من القائمة أو اضف رابط مباشر)</label>
-      <div style="display:flex;gap:8px;flex-direction:column">
-        <select id="reciterSelect" aria-label="اختيار القارئ"></select>
-        <div style="display:flex;gap:8px">
-          <input id="customUrl" type="text" placeholder="الصق رابط mp3 مباشر هنا (مثال: https://...)" />
-          <button id="addUrlBtn" class="reciter-btn">أضف للرابط</button>
-        </div>
-      </div>
 
       <div class="controls">
         <button id="playBtn" class="reciter-btn">تشغيل</button>
@@ -56,30 +44,13 @@
 
       <div class="reciter-list" id="reciterList" aria-hidden="false"></div>
 
-      <div style="margin-top:12px">
-        <label>ملاحظات</label>
-        <div class="small">لحفظ المساحة في هذا المشروع لا نستخدم أي قاعدة بيانات — كل شيء ملفّات ثابتة (HTML, JS, audio/...). يمكنك رفع ملفات الصوت داخل مجلد <code>audio/</code> في الريبو أو استعمال روابط مباشرة لمصدر موثوق. تأكد من حقوق الاستخدام و الترخيص قبل رفع أي تلاوات غير مرخّصة.</div>
-      </div>
-
-      <footer>
-        <div>نصيحة: أنشئ مجلد <code>audio/</code> داخل الريبو ورفع ملفات mp3 مسماة بوضوح (مثال: <code>abdelbasset_alajmi.mp3</code>) ثم حدّث القائمة في ملف <code>index.html</code>.</div>
-      </footer>
-    </section>
-
-    <section style="margin-top:14px" class="card">
-      <label>تعليمات سريعة للنشر على GitHub Pages</label>
-      <ol class="small">
-        <li>إنشئ repository جديد على GitHub وادفع (push) الملفات: <code>index.html</code> ومجلد <code>audio/</code>.</li>
-        <li>من Settings > Pages اختر الفرع <code>main</code> والمجلد <code>/ (root)</code> لتفعيل GitHub Pages.</li>
-        <li>بعد دقائق ستجد الموقع متاحًا تحت <code>https://<your-username>.github.io/<repo-name>/</code>.</li>
-      </ol>
-    </section>
+      <div style="margin-top:12px">   
   </main>
 
   <script>
     // قائمة مبدئية من القراء — قيم "src" يمكن أن تكون روابط مباشرة أو مسارات داخل الريبو مثل "audio/filename.mp3"
         const initialReciters = [
-          { name: 'سورة الكهف — الملف المحلي', src: 'audio/suratkahf.mp3' },
+          { name: 'سورة الكهف — عمر بن ضياء الدين', src: 'audio/suratkahf.mp3' },
           { name: 'عمر بن ضياء الدين — Omar Bn DiaaAldeen (نسخة احتياطية)', src: 'audio/omar_bn_diaaalddeen_surah_kahf.mp3' },
           { name: 'مشاري راشد العفاسي', src: 'audio/mishary_alafasy_example.mp3' },
           { name: 'محمد صديق المنشاوي', src: 'audio/muhammad_minshawi_example.mp3' }
